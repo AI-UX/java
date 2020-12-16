@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function checkAge() {
+            //获取年龄
+           var ageLine= document.getElementById("age");
+            
+            /*
+            ageLine=<inout type="text" id="age"/> 
+            ageLine.value=18(String) 
+            parseInt(ageLine.value)=18(int) */
+
+            var age = parseInt(ageLine.value);
+
+            // //判断年龄
+            // if(age < 18 ){
+            //     alert("滚犊子");
+            // }else{
+            //     alert("欢迎来上网");
+            // }
+            // if(age <18 && age > 6){
+            //     alert("离开")
+            // }
+            // else if(age>= 18 && age<=30){
+            //     alert("来玩LOL")
+            // }
+            // else if(age >=30 && age<=40){
+            //     alert("来玩贪玩蓝月")
+            
+            // }
+            // else if(age>40 && age<=100){
+            //     alert("回去歇着吧")
+            // }
+            // if (age<18){
+            //     document.write("少年")
+            // }
+            // else if(age>=19&& age<=35){
+
+            
+            // document.write("青年")}
+            // else if (age>35 && age<=45){
+            //     document.write("中年")
+            // }
+            // else if (age>45 && age<65){
+            //     document.write("中老年")
+            // }
+            // else{
+            //     document.write("老年")
+            // }
+
+
+            //获取十位数字 /10
+            var agePank=parseInt(age/10); //将bumber类型的见过转换为int类型
+            console.log(typeof(agePank));
+            switch(agePank){
+                case 1:
+                    console.log("你是十几岁的人");
+                    break;  //中断当前的结构，后面就没有必要执行了
+                case 2:
+                    console.log("你是二十几岁的人")
+                    break;
+                case 3:
+                    console.log("你是三十几岁的人")
+                    break;
+                case 4:
+                    console.log("你是四十几岁的人")
+                    break;
+                case 5:
+                    console.log("你是五十几岁的人")
+                    break;
+                case 6:
+                    console.log("你是六十几岁的人")
+                    break;
+                case 7:
+                    console.log("你是七十几岁的人")
+                    break;
+                default:  //默认情况，如果上面条件都不符合，全部进入到这里
+                    console.log("你的年龄已经很大了")
+                
+            }
+
+        }       
+        
+
+    </script>
+</head>
+<body>
+    <p>
+        检查你是否可以在网吧上网
+    </p>
+    <label>请输入你的年龄</label>
+    <input type="text" id="age"/>
+    <button onclick="checkAge() ">成年了吗？</button>
+</body>
+</html>
