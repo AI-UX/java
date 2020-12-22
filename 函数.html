@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        function  函数 功能 行为 动作
+        Fun01  函数名
+        （）里面存放参数，没写就是空参数  (name  ,age)  name 和 age都是参数
+        {} 函数体*/
+        
+        //无参函数
+        function Fun01() {
+            console.log("啦啦啦")
+            
+        }
+        console.log(typeof(Fun01));  //function
+
+        Fun01();  //函数的调用  函数后面加函数名
+        
+        //有参数的函数
+        function Fun02(name) {
+            console.log(name+"是个很人")
+            
+        }
+        Fun02("东方不败");  
+
+        //多用参数  中间用逗号隔开
+        function Fun03(name,age) {
+            console.log(name+"是个很人"+"age"+"日月神教")
+            
+        }
+        Fun03("东方不败",18);  
+
+        //带返回值的函数
+        function Fun04(a,b) {
+            
+            let c =a+b;
+            return c //返回值
+        }
+        var result=Fun04(1,4)
+        console.log(result)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

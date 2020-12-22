@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="header">
+        <ul id="nav">
+
+        </ul>
+
+    </div>
+</body>
+
+    <script>
+        //定义一个数组
+        let navList=["秒杀","优惠卷","Plus会员","品牌闪购","拍卖","京东家电","京东超市","京东生鲜",]
+        var listContent="";
+        for( var i in navList ){
+            var liName=navList[i];
+            listContent+="<li><a>"+liName+"</a></li>";
+        }
+             //listContent为要插入在ul中的代码
+            console.log(listContent);
+            //获取ul
+            var getUL=document.getElementById("nav");
+            //在ul中插入li
+            getUL.innerHTML=listContent;
+
+
+    </script>
+
+
+</html>
