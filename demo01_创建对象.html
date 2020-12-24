@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var cat={
+            name:"波斯猫",
+            age :1,
+            say :function() {
+                console.log(喵喵)
+            }
+        };
+        console.log(cat, typeof(cat));
+
+        var boyOrGirlFriend={
+            name:"古力娜扎",
+            age:27,
+            guangjie:function(){
+                console.log("陪逛街");
+            },
+            chifan:function(){
+                console.log("一起吃饭");
+            },
+            kandianying:function(){
+                console.log("一起看电影");
+            }
+            
+            
+        }
+        // console.log(boyOrGirlFriend)
+
+        // let name=boyOrGirlFriend.name;
+        // let age=boyOrGirlFriend.age;
+        // let CHI=boyOrGirlFriend.chifan;
+        // let kanDianYing=boyOrGirlFriend.kandianying;
+        // console.log(name);
+        // console.log(age);
+        // CHI();
+        // kanDianYing();
+
+        // boyOrGirlFriend.name="周冬雨";
+        // boyOrGirlFriend.age="20"
+        // console.log(boyOrGirlFriend.name)
+        // console.log(boyOrGirlFriend.age)
+        // boyOrGirlFriend.guangjie()
+        // let CHI=boyOrGirlFriend.chifan;
+        // CHI();
+
+        for(let key in boyOrGirlFriend){
+            console.log(key);
+            console.log(boyOrGirlFriend[key])
+        }
+      //hsaOwnProperty 判断对象是否含有某个属性或者函数  （行为 功能）
+      console.log(boyOrGirlFriend.hasOwnProperty("guangjie"));  //ture
+      console.log(boyOrGirlFriend.hasOwnProperty("liaotian"));  //false
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
