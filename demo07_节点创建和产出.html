@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="show">
+
+    </div>
+    <ul id="list">
+
+    </ul>
+</body>
+<script>
+    var get_show=document.getElementById("show")
+    get_show.innerHTML="js操作的批量添加";
+    var get_list=document.getElementById("list")
+    for (let i =0;i<30;i++){
+        let new_li=document.createElement("li");
+        new_li.innerHTML="这是第"+"i"+"个标签";
+        get_list.appendChild(new_li);
+    }
+</script>
+</html>

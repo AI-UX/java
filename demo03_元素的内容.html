@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+        这是盒子
+        <span>这是span中的文字</span>
+
+    </div>
+</body>
+<script>
+    var get_box=document.getElementById("box");
+    console.log(get_box.innerHTML)  //这十个字 <span>这是span中的文字
+    console.log(get_box.outerHTML)
+    
+    console.log(get_box.innerText)//这是盒子
+    console.log(get_box.outerText)
+    
+</script>
+</html>

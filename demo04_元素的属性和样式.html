@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="cityname" id="city" value="北京">
+</body>
+<script>
+    var get_city=document.querySelector("#city");
+    console.log(get_city);
+    console.log(get_city.value);
+    get_city.value="上海"; //修改 只是修改了Html中的属性
+    console.log(get_city.value); //上海/
+
+    get_city.setAttribute("value","广州");  //通过js修改网页源代码  js特性
+    console.log(get_city.getAttribute("value"));
+</script>
+</html>

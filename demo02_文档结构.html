@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="test" id="first">
+            <span>first text</span>
+        </div>
+        <div>
+            <div class="test" id="second">second text</div>
+            <div class="test" id="third">third text</div>
+            <div class="test" id="four">four text</div>
+            <div class="test" id="five">five text</div>
+            <div class="test" id="six">six text</div>
+        </div>
+
+    </div>
+</body>
+<script>
+    // 由于该代码使用频率高，直接写在函数里 这个过程叫做  封装
+    var $=function(id){
+        return document.querySelector(id);
+    }
+    var ele=$("#wrapper");
+    (function(){
+        console.log(ele.children);  //该节点所有的孩子
+        console.log(ele.firstElementChild); //第一个孩子
+        console.log(ele.lastElementChild); //最后一个孩子
+        console.log(ele.firstElementChild.nextElmentSibling);//第一个孩子的下一个兄弟
+        console.log(ele.childElementCount);//子元素的个数
+    })();
+    (function(){
+        console.log(ele.parentNode);  //body
+        console.log(ele.childNodes);  ///13  实时表示 包括两部分 text 标签 comment
+        console.log(ele.firsrChild);
+        console.log(ele.lastChild);
+
+        var ele_first=$("#first");
+        console.log(ele_first.netSibling) //该元素的下一个兄弟
+    })();
+
+</script>
+</html>
