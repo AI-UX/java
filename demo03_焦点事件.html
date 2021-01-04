@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            padding: 50px;
+        }
+        .left,.top{
+            float: left;
+        }
+        .left{
+            margin-right: 10px;
+        }
+        .tip{
+            font-size: 12px;
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="left">
+            <input type="text" id="phone" placeholder="输入手机号">
+        </div>
+        <div class="tip" id="tip">
+            请输入正确的手机号
+
+        </div>
+
+    </div>
+</body>
+<script>
+    window.onload=function(){
+        var phone=document.getElementById("phone")
+        var tip=document.getElementById("tip")
+        phone.onfocus=function(){     //当输入框开始获得焦点，显示后面的提示
+            tip.style.display="block";
+        }
+        phone.onblur=function(){   //当鼠标一开输入框 ，说明输入完成，开始校验格式是否正确
+            var relPhone=this.value;
+            const reg= /^1\d{10}$/;  //手机号正则表达式
+            if (reg.test(relPhone)){
+                tip.innerHTML="正确";
+            }else{
+                tip.innerHTML="手机格式有误"
+            }
+
+        }
+    }
+</script>
+</html>

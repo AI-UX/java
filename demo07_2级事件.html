@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" id="test01" value="测试01">
+    <input type="button" id="test02" value="测试02">
+</body>
+<script>
+    var test01=document.getElementById("test01")
+    var test02=document.getElementById("test02")
+
+   function show(){
+        console.log("按钮1被点击了")
+    }
+    test01.addEventListener("click",show,false) //addEventListener 添加事件监听器
+
+    test02.addEventListener("click",function(){
+         //取消掉按钮1上的事件  removeEventListener移出事件监听器
+        test01.removeEventListener("click",show,false);
+        console.log("1上的点击事件已经被移除了")
+    },false)
+
+</script>
+</html>

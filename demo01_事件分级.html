@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="Fun01() ">点我</button>
+    <button id="btn2">点我</button>
+</body>
+<script>
+    /* 0级事件 */
+     function Fun01(){
+         console.log("0级事件被触发了")
+     }
+
+    var btn=document.getElementById("Fun01");
+    Fun01.onclick= function () {
+        console.log("再点试试");
+    }
+
+    /* 2级事件 */
+    var btn=document.getElementById("btn2");
+    btn.addEventListener("click",function(){
+        console.log("我是二级事件")
+    },false)
+</script>
+</html>

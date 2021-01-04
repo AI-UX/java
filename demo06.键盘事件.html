@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="text">
+        你还可以输入
+        <span><em id="count">30</em>/30</span>
+    </p>
+    <div class="input">
+        <textarea name="text" id="text" cols="70" rows="10"></textarea>
+    </div>
+</body>
+<script>
+    var text=document.getElementById("text");
+    // console.log(text)
+    var count=document.getElementById("count");
+    var total=30;
+    document.onkeyup=function(ev){  //当键盘弹起时开始统计输入多少数字
+        var len=text.value.length;  //求输入框内容的长度
+        // console.log(len)
+        var allowLen=total-len;  //总长度减去已经输入的长度=剩下可输入的长度
+        count.innerHTML=allowLen; //把求得的结果展示在上方统计显示白哦签上
+    }
+</script>
+</html>

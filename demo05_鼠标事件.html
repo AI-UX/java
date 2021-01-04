@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 2000px;
+        }
+        #box{
+            width: 200px;
+            height: 200px;
+            background: red;
+            overflow: auto; /* 出现进度条 */
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <p>拖动</p>
+        <p>拖动</p>
+        <p>拖动</p>
+        <p>拖动</p>
+        <p>拖动</p>
+        <p>拖动</p>
+        <p>拖动</p>
+        <p>拖动</p>
+        <p>拖动</p>
+        <p>拖动</p>
+    </div>
+</body>
+<script>
+    var box=document.getElementById("box");
+    box.onmousedown=function(){
+        console.log("鼠标被按下了");
+    }
+    
+    box.onmousemove=function(){
+        console.log("鼠标被移动了");
+    }
+    box.onmouseup=function(){
+        console.log("鼠标被松开了");
+    }
+    box.onclick=function(){
+        console.log("鼠标被点击了");
+    }
+    box.onscroll=function(){
+        console.log("鼠标窗口被滚动了了");
+    }
+    box.onresize=function(){
+        console.log("鼠标被按下了");
+    }
+    
+    
+
+</script>
+</html>
