@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #father{
+            width: 400px;
+            height: 400px;
+            background-color: red;
+        }
+        #son{
+            width: 300px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background-color: yellow;
+            cursor: pointer;  
+            /* 把鼠标设置为小手的形状 */
+        }
+    </style>
+    }
+</head>
+<body>
+    <div id="father">
+        <p id="son">孩子标签</p>
+    </div>
+</body>
+<script>
+    var father=document.getElementById("father")
+    var son=document.getElementById("son")
+    son.addEventListener("click",function(){
+        console.log("儿子点被点击了")
+    
+    },false)
+
+    father.addEventListener("click",function(){
+        console.log("父节点被点击了")
+        event.stopPropagation();  //停止事件传播
+    
+    },false)
+    
+    document.body.addEventListener("click",function(){
+        console.log("页面体被点击了")
+    },false)
+    document.documentElement.addEventListener("click",function(){
+        console.log("页面元素被点击了")
+    },false)
+    document.addEventListener("click",function(){
+        console.log("文档被点击了")
+    },false)
+</script>
+</html>

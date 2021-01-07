@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="ul_delegate">
+        <li><button>111</button></li>
+        <li><button>222</button></li>
+        <li><button>333</button></li>
+        <li><button>444</button></li>
+        <li><button>555</button></li>
+    </ul>
+</body>
+<script>
+    /* 批量创建无需列表节点 */
+    var get_ul=document.getElementById("ul_delegate")
+
+    for(var i=0;i<300;i++){
+        let new_button=document.createElement("button");
+        let new_li=document.createElement("li");
+        new_button.innerHTML="00"+(i+1);
+        new_li.appendChild(new_button);
+        get_ul.appendChild(new_li)
+    }
+    /* 循环方式为节点添加点击事件  效率低  占用资源多 */
+    // var btns=document.getElementsByTagName("button");
+    // for (let i=0; i<btns.length ; i++){
+    //     console.log(this,this.innerHTML)
+    // } 
+
+    /* 代理方式为所有节点添加点击事件 ，占用资源少 ，效率高 */
+
+    var ul=document.getElementById("ul_delegate")
+    ul.onclick=function(){
+        if (event.target.nodeName.toLowerCase()=="button"){
+            console.log(event.target,event.target.innerHTML)
+        }
+    }
+</script>
+</html>

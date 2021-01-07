@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <P id="box"><a href="http://www.baidu.com">baidu</a></P>
+    </div>
+</body>
+<script>
+    var as=document.getElementsByTagName("a");
+    // console.log("a")
+    as[0].onclick=function(event){
+        // event.preventDefault();  //不在跳转
+        console.log("跳转被阻止了")
+        return false  //直接返回一个false  也能阻止标签的默认事件
+    }
+</script>
+</html>
